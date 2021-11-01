@@ -379,7 +379,7 @@ WaveStepForward proc
     mov     nWaveEnemiesRemain, eax
     ; spawn enemy
     mov     eax, nWaveNumber
-    mov     ecx, 2
+    mov     ecx, 10
     mul     ecx
     mov     lvl, eax ; set lvl
     xor     edx, edx
@@ -391,7 +391,7 @@ WaveStepForward proc
     ; popad
     .IF     edx <= 16
         invoke  PrefabEnemy1, lvl
-    .ELSEIF edx <= 25
+    .ELSEIF edx <= 22
         invoke  PrefabEnemy2, lvl
     .ELSEIF edx <= 28
         invoke  PrefabEnemy3, lvl
